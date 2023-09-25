@@ -91,7 +91,7 @@
   color: var(--calculator-equal-btn-color);
 }
 
-@media (width > 375px) {
+@media (width > 500px) {
   .calculator {
     max-width: 500px;
   }
