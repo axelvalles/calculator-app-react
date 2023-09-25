@@ -31,6 +31,13 @@ function App() {
           }
         }
         break;
+      case ".":
+        {
+          if (!result.includes(".")) {
+            setResult(`${result}${button.name}`);
+          }
+        }
+        break;
       case "x":
         {
           setInitOperation(true);
@@ -71,7 +78,10 @@ function App() {
           }
         }
         break;
+
       default:
+        console.log(button.name);
+
         break;
     }
   };
