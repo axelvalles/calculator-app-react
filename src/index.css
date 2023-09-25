@@ -1,0 +1,116 @@
+[data-theme="default"] {
+  /* (main background) */
+  --main-bg: hsl(222, 26%, 31%);
+  /* (toggle background, keypad background) */
+  --toggle-bg: hsl(223, 31%, 20%);
+  /* (screen background) */
+  --screen-bg: hsl(224, 36%, 15%);
+
+  --key-blue-bg: hsl(225, 21%, 49%);
+  --key-blue-shadow: hsl(224, 28%, 35%);
+
+  --key-red-bg: hsl(6, 63%, 50%);
+  --key-red-shadow: hsl(6, 70%, 34%);
+
+  --key-orange-bg: hsl(6, 63%, 50%);
+  --key-orange-shadow: hsl(6, 70%, 34%);
+
+  --text-grayish-blue: hsl(221, 14%, 31%);
+  --white: hsl(0, 0%, 100%);
+
+  --body-color: var(--white);
+  --calculator-key-bg: var(--white);
+  --calculator-key_shadow: color-mix(
+    in lch,
+    var(--calculator-key-bg) 80%,
+    hsl(0, 0%, 0%) 20%
+  );
+  --calculator-equal-btn-color: var(--white);
+}
+
+[data-theme="light"] {
+  /* (main background) */
+  --main-bg: hsl(0, 0%, 90%);
+  /* (toggle background, keypad background) */
+  --toggle-bg: hsl(0, 5%, 81%);
+  /* (screen background) */
+  --screen-bg: hsl(0, 0%, 93%);
+
+  --key-blue-bg: hsl(185, 42%, 37%);
+  --key-blue-shadow: hsl(185, 58%, 25%);
+
+  --key-red-bg: hsl(25, 98%, 40%);
+  --key-red-shadow: hsl(25, 99%, 27%);
+
+  --key-orange-bg: hsl(45, 7%, 89%);
+  --key-orange-shadow: hsl(35, 11%, 61%);
+
+  --text-grayish-blue: hsl(60, 10%, 19%);
+  --white: hsl(0, 0%, 100%);
+
+  --body-color: var(--text-grayish-blue);
+  --calculator-key-bg: var(--white);
+  --calculator-key_shadow: color-mix(
+    in lch,
+    var(--toggle-bg) 80%,
+    hsl(0, 0%, 0%) 20%
+  );
+  --calculator-equal-btn-color: var(--white);
+}
+
+[data-theme="dark"] {
+  /* (main background) */
+  --main-bg: hsl(268, 75%, 9%);
+  /* (toggle background, keypad background) */
+  --toggle-bg: hsl(268, 71%, 12%);
+  /* (screen background) */
+  --screen-bg: hsl(268, 71%, 12%);
+
+  --key-blue-bg: hsl(281, 89%, 26%);
+  --key-blue-shadow: hsl(285, 91%, 52%);
+
+  --key-red-bg: hsl(176, 100%, 44%);
+  --key-red-shadow: hsl(177, 92%, 70%);
+
+  --key-orange-bg: hsl(268, 47%, 21%);
+  --key-orange-shadow: hsl(290, 70%, 36%);
+
+  --text-grayish-blue: hsl(52, 100%, 62%);
+  --white: hsl(0, 0%, 100%);
+
+  --body-color: var(--text-grayish-blue);
+  --calculator-key-bg: var(--key-orange-bg);
+  --calculator-key_shadow: color-mix(
+    in lch,
+    var(--key-blue-shadow) 80%,
+    hsl(0, 0%, 0%) 20%
+  );
+  --calculator-equal-btn-color: hsl(198, 20%, 13%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "League Spartan", sans-serif;
+  line-height: 1.5;
+  font-weight: 700;
+  font-size: 32px;
+
+  color-scheme: light dark;
+
+  --breakpoint-mobile: 375px;
+  --breakpoint-desktop: 1440px;
+}
+
+body {
+  background-color: var(--main-bg);
+  color: var(--body-color);
+}

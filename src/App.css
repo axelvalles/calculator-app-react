@@ -1,0 +1,102 @@
+.container {
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.calculator {
+  max-width: var(--breakpoint-mobile);
+  width: 100%;
+  padding: 15px;
+  margin: 0px auto;
+}
+
+.calculator__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: small;
+  margin-bottom: 20px;
+}
+
+.calculator__result {
+  background-color: var(--screen-bg);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+
+.calculator__result div {
+  height: 20px;
+  font-size: 20px;
+}
+
+.calculator__result h2 {
+  min-height: 72px;
+  word-break: break-all;
+}
+
+.calculator__actions {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  place-content: center;
+  gap: 15px;
+  background-color: var(--toggle-bg);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.calculator__btn {
+  height: 60px;
+  width: 100%;
+  font-size: 32px;
+  font-family: "League Spartan", sans-serif;
+  background-color: var(--calculator-key-bg);
+  color: var(--text-grayish-blue);
+  border-radius: 8px;
+  box-shadow: 0px 3px 0px 0px var(--calculator-key_shadow);
+}
+
+.calculator__btn:active {
+  filter: brightness(1.5);
+}
+
+.btn__del {
+  font-size: 24px;
+  background-color: var(--key-blue-bg);
+  box-shadow: 0px 3px 0px 0px var(--key-blue-shadow);
+  color: var(--white);
+}
+
+.btn__reset {
+  font-size: 24px;
+  grid-column: span 2;
+  background-color: var(--key-blue-bg);
+  box-shadow: 0px 3px 0px 0px var(--key-blue-shadow);
+  color: var(--white);
+}
+
+.btn__equal {
+  grid-column: span 2;
+  background-color: var(--key-red-bg);
+  box-shadow: 0px 3px 0px 0px var(--key-red-shadow);
+  color: var(--calculator-equal-btn-color);
+}
+
+@media (width > 375px) {
+  .calculator {
+    max-width: 500px;
+  }
+
+  .calculator__actions {
+    grid-template-columns: repeat(4, 100px);
+  }
+}
